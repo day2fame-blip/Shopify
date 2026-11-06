@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Velouran – Give Your Back a Break</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--soft:#f6f1ec;--ink:#1f2128;--mute:#5d6068;--line:#e6ded6;--sage:#6f8374;--hero:#b99f8a;--hero-ink:#23252d;--btn:#1f2128;--btnt:#fff;--card:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17181c;--soft:#202228;--ink:#f2eee9;--mute:#aaa7a2;--line:#33353c;--sage:#52645a;--hero:#7d6959;--hero-ink:#fbf6f0;--btn:#f2eee9;--btnt:#17181c;--card:#1d1f24;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17181c;--soft:#202228;--ink:#f2eee9;--mute:#aaa7a2;--line:#33353c;--sage:#52645a;--hero:#7d6959;--hero-ink:#fbf6f0;--btn:#f2eee9;--btnt:#17181c;--card:#1d1f24;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Newsreader",Georgia,serif;line-height:1.1;margin:0 0 .5em}
+a{color:inherit;text-decoration:none}.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.top{background:#000;color:#fff;text-align:center;padding:14px;font-size:20px;font-weight:500}
+.bar{background:var(--sage);color:#fff;text-align:center;padding:10px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+header{background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:28px;height:66px}
+.logo{font:500 30px "Newsreader",serif;letter-spacing:.14em}
+.links{display:flex;gap:6px;overflow-x:auto;flex:1;scrollbar-width:none}
+.links a{padding:4px 10px;font-size:13px;color:var(--mute);white-space:nowrap;letter-spacing:.03em}
+.links a.on{background:var(--soft);color:var(--ink);font-weight:700;border-radius:4px}
+.cart{font-size:13px;font-weight:700;white-space:nowrap}
+.hero{background:var(--hero);min-height:560px;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:-8%;bottom:-20%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(255,255,255,.35),rgba(255,255,255,0) 70%)}
+.hero .wrap{display:flex;justify-content:flex-end;width:100%;position:relative}
+.hero-t{max-width:620px;text-align:right;color:var(--hero-ink)}
+.hero h1{font-size:clamp(44px,7vw,84px);font-weight:700}
+.hero p{font-size:clamp(20px,2.6vw,32px);margin:0 0 28px;line-height:1.3}
+.btn{display:inline-block;background:var(--btn);color:var(--btnt);padding:15px 34px;border-radius:4px;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;border:0;cursor:pointer;font-family:inherit}
+.btn.w{width:100%;text-align:center}
+.strip{background:var(--soft);padding:34px 0}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.strip b{display:block;font-family:"Newsreader",serif;font-size:20px}.strip span{font-size:14px;color:var(--mute)}
+section{padding:72px 0}h2{font-size:clamp(30px,4vw,44px)}
+.center{text-align:center}.sub{color:var(--mute);max-width:620px;margin:0 auto 40px}
+.prod{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:start}
+.gal{aspect-ratio:1;border-radius:10px;background:linear-gradient(145deg,var(--hero),#d8c6b6);display:grid;place-items:center;color:#fff;text-align:center;padding:30px;font-size:14px}
+.gal svg{width:150px;margin-bottom:10px}
+.stars{color:#c48b3f;letter-spacing:2px;font-size:14px}
+.price{font:700 28px "Newsreader",serif;margin:8px 0 16px}
+.ticks{list-style:none;padding:0;margin:0 0 22px}.ticks li{padding:6px 0 6px 28px;position:relative}
+.ticks li::before{content:"✓";position:absolute;left:0;color:var(--sage);font-weight:700}
+.opts{display:flex;gap:10px;margin-bottom:18px}
+.opts label{flex:1;border:1.5px solid var(--line);border-radius:6px;padding:12px;text-align:center;cursor:pointer;font-weight:500}
+.opts input{display:none}.opts input:checked+span{font-weight:700}
+.opts label:has(input:checked){border-color:var(--ink);background:var(--soft)}
+.fine{font-size:13px;color:var(--mute);text-align:center;margin-top:12px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:28px}
+.card i{font:700 14px "DM Sans";color:var(--sage);font-style:normal;letter-spacing:.1em}
+.alt{background:var(--soft)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+table{width:100%;border-collapse:collapse}td{padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}td:first-child{font-weight:700;width:38%}
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rev p{margin:10px 0}.rev small{color:var(--mute)}
+.guar{background:var(--sage);color:#fff;text-align:center}.guar .sub{color:#eef2ee}
+.guar .btn{background:#fff;color:#1f2128}
+details{border-bottom:1px solid var(--line);padding:16px 0}summary{cursor:pointer;font-weight:700}details p{color:var(--mute);margin:10px 0 0}
+footer{background:#000;color:#cfcfcf;padding:44px 0 36px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:10px 22px}footer .logo{color:#fff;font-size:24px}
+.note{font-size:12px;color:var(--mute);margin-top:18px}
+@media(max-width:860px){.prod,.two,.steps,.rev{grid-template-columns:1fr}.strip .wrap{grid-template-columns:1fr 1fr}.hero-t{text-align:left}.hero .wrap{justify-content:flex-start}.nav{gap:12px}.top{font-size:17px}}
+</style>
+</head>
+<body>
+<div class="top">Free shipping + 30-day money-back guarantee</div>
+<div class="bar">Ships within 24 hours · Tracking included</div>
+<header><div class="wrap nav">
+<a class="logo" href="#">VELOURAN</a>
+<nav class="links">
+<a class="on" href="#">Home</a><a href="#product">Catalog</a><a href="#faq">Contact</a><a href="#faq">Shipping Policy</a><a href="#faq">Returns &amp; Refunds</a><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Legal Notice</a>
+</nav>
+<a class="cart" href="https://www.mycorevia.store/cart">Cart (0)</a>
+</div></header>
+
+<div class="hero"><div class="wrap"><div class="hero-t">
+<h1>Finally, Give Your Back a Break.</h1>
+<p>After a long day at your desk, relief starts here.</p>
+<a class="btn" href="#product">Shop Velouran Pro</a>
+</div></div></div>
+
+<div class="strip"><div class="wrap">
+<div><b>Air decompression</b><span>Gentle traction for your lower back</span></div>
+<div><b>Infrared heat</b><span>Three comforting heat levels</span></div>
+<div><b>3D vibration</b><span>Soothing deep massage</span></div>
+<div><b>Cordless</b><span>Up to 110 minutes per charge</span></div>
+</div></div>
+
+<section id="product"><div class="wrap prod">
+<div class="gal"><div>
+<svg viewBox="0 0 160 80" fill="none" stroke="currentColor" stroke-width="3"><rect x="6" y="20" width="148" height="40" rx="20"/><circle cx="80" cy="40" r="10"/><path d="M30 40h20M110 40h20"/></svg>
+Drop your product photos here in Shopify’s media gallery</div></div>
+<div>
+<div class="stars">★★★★★ <span style="color:var(--mute);letter-spacing:0">4.7/5 · 1,800+ reviews</span></div>
+<h2>Velouran Pro Spinal System</h2>
+<div class="price">From €53,95</div>
+<ul class="ticks">
+<li>Made for everyday lower back discomfort</li>
+<li>Air traction, infrared heat and vibration in one belt</li>
+<li>Cordless and drug-free: wear it on the couch or at your desk</li>
+</ul>
+<div class="opts">
+<label><input type="radio" name="v" checked><span>Essential</span></label>
+<label><input type="radio" name="v"><span>Complete</span></label>
+</div>
+<a class="btn w" href="https://www.mycorevia.store/products/reliefbelt">Add to cart</a>
+<div class="fine">30-day money-back guarantee · Secure checkout · Visa, Mastercard, PayPal, Apple Pay, Google Pay</div>
+</div></div></section>
+
+<section class="alt"><div class="wrap center">
+<h2>Wrap on. Inflate. Pick your mode. Relax.</h2>
+<p class="sub">Twenty minutes a session, no appointment needed.</p>
+<div class="steps" style="text-align:left">
+<div class="card"><i>01</i><h3>Wrap it on</h3><p>Secure the adjustable belt snugly around your lower back. An extension pad is included for larger sizes.</p></div>
+<div class="card"><i>02</i><h3>Inflate</h3><p>Use the lightweight hand pump to add gentle decompression at the level that feels right.</p></div>
+<div class="card"><i>03</i><h3>Choose &amp; relax</h3><p>Pick heat, vibration or both from the touch controls, then get on with your evening.</p></div>
+</div></div></section>
+
+<section><div class="wrap two">
+<div>
+<h2>Is it for you?</h2>
+<ul class="ticks">
+<li>You wake up with a stiff lower back</li>
+<li>Long hours sitting, standing or driving leave you aching</li>
+<li>Belts, patches and creams only helped for a day</li>
+<li>You want a drug-free way to unwind your back at home</li>
+</ul>
+<p class="note">Velouran is a comfort and relaxation device, not a replacement for medical treatment. If you have a medical condition or ongoing pain, talk to your doctor before use.</p>
+</div>
+<div>
+<h2>Specifications</h2>
+<table>
+<tr><td>Battery</td><td>5000mAh rechargeable, up to 110 min</td></tr>
+<tr><td>Charging</td><td>About 3 hours via USB</td></tr>
+<tr><td>Heat levels</td><td>45°C / 55°C / 65°C</td></tr>
+<tr><td>Modes</td><td>Decompression, heat, vibration or all</td></tr>
+<tr><td>Materials</td><td>PU leather, knitted cotton, TPU</td></tr>
+<tr><td>Belt size</td><td>Adjustable up to 120cm</td></tr>
+<tr><td>In the box</td><td>Belt, heating pad, pump, USB cable, manual</td></tr>
+</table></div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<h2 class="center">Loved by 1,800+ customers</h2>
+<p class="sub center">Individual results vary.</p>
+<div class="rev">
+<div class="card"><div class="stars">★★★★★</div><p>Drive for a living. Using this every evening has made my mornings much easier.</p><small>James T. · Verified</small></div>
+<div class="card"><div class="stars">★★★★★</div><p>The extension pad works and the fit is comfortable. Easy to set up in two minutes.</p><small>Jennifer M. · Verified</small></div>
+<div class="card"><div class="stars">★★★★★</div><p>Heat and vibration together feel great. My back feels looser after each session.</p><small>Daniel M. · Verified</small></div>
+</div></div></section>
+
+<section class="guar"><div class="wrap">
+<h2>30-day money-back guarantee</h2>
+<p class="sub">Try Velouran at home. If it’s not for you, tell us within 30 days and we’ll make it right.</p>
+<a class="btn" href="https://www.mycorevia.store/products/reliefbelt">Try it risk-free</a>
+</div></section>
+
+<section id="faq"><div class="wrap" style="max-width:760px">
+<h2 class="center">Questions</h2>
+<details><summary>How fast does it ship?</summary><p>Orders leave within 24 hours with tracking. Delivery to the US, EU and UK takes about 9–15 business days.</p></details>
+<details><summary>How long is each session?</summary><p>We recommend about 20 minutes, and the battery gives up to 110 minutes of cordless use.</p></details>
+<details><summary>What if it’s not right for me?</summary><p>You’re covered by our 30-day money-back guarantee.</p></details>
+<details><summary>How do I contact you?</summary><p>Email support@corevia.com and we’ll get back to you.</p></details>
+</div></section>
+
+<footer><div class="wrap">
+<div><a class="logo" href="#">VELOURAN</a><div style="margin-top:8px">© 2026 Velouran</div></div>
+<nav><a href="#">Privacy policy</a><a href="#">Legal notice</a><a href="#">Shipping policy</a><a href="#">Refund policy</a><a href="#">Terms of service</a><a href="#">Contact</a></nav>
+</div></footer>
+</body>
+</html>
